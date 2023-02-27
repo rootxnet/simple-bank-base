@@ -1,0 +1,43 @@
+version: "3.8"
+
+x-app-common: &app-common
+  build:
+    context: .
+    dockerfile: tools/docker/api/Dockerfile
+  env_file: tools/env/dev.env
+  depends_on:
+    - db
+  volumes:
+    - ./api:/app
+    - ./tools/docker/api/entrypoint.sh:/app/entrypoint.sh
+
+services:
+  api:
+    <<: *app-common
+    entrypoint: /app/entrypoint.sh
+    ports:
+      - "8000:8000"
+      - "8888:8888"
+    restart: on-failure
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: main
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d main -U root" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

@@ -1,0 +1,102 @@
+[
+  {
+    "model": "transactions.financialaccount",
+    "pk": "6d303411-0858-4895-9fa0-ca929c5b6d8c",
+    "fields": {
+      "owner": "00000000-0000-0000-0000-000000000001",
+      "balance": "5487.50",
+      "updated_at": "2023-02-21T03:24:49.863Z",
+      "created_at": "2023-02-21T01:08:24.647Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "16eb2697-a4a6-4154-a205-9c86703a1da1",
+    "fields": {
+      "account": "6d303411-0858-4895-9fa0-ca929c5b6d8c",
+      "note": "Payment #1",
+      "transaction_type": "DEBIT",
+      "transaction_status": "APPROVED",
+      "transaction_time": "2023-02-21T01:09:30Z",
+      "amount": "1000.00",
+      "currency_code": "USD",
+      "updated_at": "2023-02-21T01:09:34.318Z",
+      "created_at": "2023-02-21T01:09:34.318Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "4ab6f11f-9abf-4293-a123-62c7470c8ced",
+    "fields": {
+      "account": "6d303411-0858-4895-9fa0-ca929c5b6d8c",
+      "note": "Payment #4",
+      "transaction_type": "DEBIT",
+      "transaction_status": "APPROVED",
+      "transaction_time": "2023-02-21T03:24:42Z",
+      "amount": "1000.00",
+      "currency_code": "EUR",
+      "updated_at": "2023-02-21T03:24:49.857Z",
+      "created_at": "2023-02-21T03:24:49.857Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "60fa6779-dd61-4b7b-831f-0839f19f2a3f",
+    "fields": {
+      "account": "6d303411-0858-4895-9fa0-ca929c5b6d8c",
+      "note": "Initial Deposit",
+      "transaction_type": "CREDIT",
+      "transaction_status": "APPROVED",
+      "transaction_time": "2023-01-01T01:32:17Z",
+      "amount": "10000.00",
+      "currency_code": "USD",
+      "updated_at": "2023-02-21T01:32:20.370Z",
+      "created_at": "2023-02-21T01:09:14.981Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "be41d585-40ef-46f2-88da-1d195ba7c787",
+    "fields": {
+      "account": "6d303411-0858-4895-9fa0-ca929c5b6d8c",
+      "note": "Deposit #2",
+      "transaction_type": "CREDIT",
+      "transaction_status": "APPROVED",
+      "transaction_time": "2023-02-21T01:10:06Z",
+      "amount": "400.00",
+      "currency_code": "PLN",
+      "updated_at": "2023-02-21T01:10:15.341Z",
+      "created_at": "2023-02-21T01:10:15.341Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "d18bc5dc-c58e-4f63-8acb-ccabb6c39bb3",
+    "fields": {
+      "account": "6d303411-0858-4895-9fa0-ca929c5b6d8c",
+      "note": "Payment #2",
+      "transaction_type": "DEBIT",
+      "transaction_status": "APPROVED",
+      "transaction_time": "2023-02-21T01:09:47Z",
+      "amount": "2500.00",
+      "currency_code": "USD",
+      "updated_at": "2023-02-21T01:09:52.165Z",
+      "created_at": "2023-02-21T01:09:52.165Z"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "e78978ba-ae79-4a2a-8ee5-4d2f6e609ab5",
+    "fields": {
+      "account": "6d303411-0858-4895-9fa0-ca929c5b6d8c",
+      "note": "Purchase #3",
+      "transaction_type": "DEBIT",
+      "transaction_status": "APPROVED",
+      "transaction_time": "2023-02-21T03:23:57Z",
+      "amount": "150.00",
+      "currency_code": "PLN",
+      "updated_at": "2023-02-21T03:24:07.774Z",
+      "created_at": "2023-02-21T03:24:07.774Z"
+    }
+  }
+]
